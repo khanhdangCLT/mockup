@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+  FILE MẪU – chép file này để tạo trang mục mới.
+  1. Chép thành pages/NN-ten-muc.html; đổi data-page="XX" thành mã trang (vd "04"), trùng "page" trong assets/js/menu.js.
+  2. Đổi tiêu đề, mô tả. Mỗi màn hình là một khối <section class="screen"> (chép thêm khối để thêm màn hình).
+  3. id của mỗi section phải trùng "id" trong mục "screens" ở menu.js.
+  4. Ảnh đặt ở images/NN-ten-muc/. Hai ảnh trở lên: thêm <figure class="shot"> trong screen__shots.
+-->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X. Tên mục – Dorco WMS TSD</title>
+<meta name="description" content="Dorco WMS – To-Be Solution Design: giải pháp quản lý kho cho Dorco Vina và Dorco Living.">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body data-root="../" data-page="XX">
+<main class="content">
+
+<div class="page-head">
+  <small>Giải pháp hệ thống</small>
+  <h1>X. Tên mục</h1>
+  <p>Một câu giới thiệu mục.</p>
+</div>
+
+<!-- ===== BẮT ĐẦU: X.1 Tên màn hình ===== -->
+<section class="screen" id="m-vi-du-1">
+  <h2 class="screen__title"><span class="no">X.1</span>Tên màn hình</h2>
+  <p class="screen__path">Menu › Menu con › Màn hình</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Giao diện WMS · Tên màn hình</figcaption>
+        <img src="../images/XX-ten-muc/1.png" alt="Mô tả ngắn nội dung ảnh"></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Màn hình dùng để … (viết ngắn, như hướng dẫn sử dụng).</p></div>
+      <div class="note note--biz"><h3>Lưu ý nghiệp vụ</h3><ul><li>Lưu ý nghiệp vụ nếu có. Không có thì xóa cả khối note--biz.</li></ul></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: X.1 Tên màn hình ===== -->
+
+</main>
+
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* ===== Khối nội dung chung ===== */
+.doc{margin-bottom:48px}
+.doc h2{font-size:24px;letter-spacing:-.01em;margin:0 0 6px}
+.doc h3{font-size:18px;margin:26px 0 10px}
+.lead{color:var(--muted);max-width:72ch}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.box h4{font-size:15px;margin:0 0 8px}
+.box ul{font-size:15px;margin:0}
+.box--in{border-top:3px solid var(--green)}
+.box--out{border-top:3px solid var(--muted)}
+
+.ask{margin-top:12px;background:var(--goldbg);border:1px solid var(--goldline);border-radius:var(--r-sm);padding:8px 12px;font-size:14.5px}
+.ask b{color:var(--gold)}
+.sub{color:var(--muted);font-size:14px}
+
+.pl{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;border-radius:5px;padding:0 6px;margin-right:6px;vertical-align:1px}
+.pl.hy{background:var(--hy)}.pl.hn{background:var(--hn)}
+
+.tw{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+
+/* Sơ đồ SAP ⇄ WMS ⇄ PDA */
+.arch{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin:18px 0}
+.arch .nd{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.arch .nd.w{border:2px solid var(--green)}
+.arch .nd b{display:block;margin-bottom:4px}
+.arch .nd small{color:var(--muted);font-size:13.5px;line-height:1.5;display:block}
+.arch .ar{align-self:center;color:var(--green);font-size:22px;font-weight:700}
+
+/* Các bước có thứ tự */
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:12px;margin:0 0 10px}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:15px}
+
+/* Lưới thẻ mục III */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card-link{display:flex;gap:12px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.card-link:hover{border-color:var(--green);color:var(--ink)}
+.card-link i{font-style:normal;flex:none;width:30px;height:30px;border-radius:var(--r-sm);background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center}
+.card-link b{display:block;line-height:1.35}
+.card-link span{display:block;color:var(--muted);font-size:13.5px;line-height:1.45;margin-top:2px}
+.card-link.is-soon{opacity:.6}
+.card-link.is-soon i{background:var(--muted)}
+
+/* Trang bìa */
+.cover{padding:18px 0 34px;border-bottom:1px solid var(--line);margin-bottom:36px}
+.cover h1{font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:4px 0 14px;max-width:18ch}
+.cover small{color:var(--green);font-weight:600;font-size:13.5px}
+.cover p{font-size:18px;color:var(--muted);max-width:62ch;margin-bottom:22px}
+.meta{display:flex;flex-wrap:wrap;gap:12px 36px;font-size:13.5px;color:var(--muted)}
+.meta b{display:block;color:var(--ink);font-size:15px}
+
+/* ===== Một màn hình ===== */
+.screen{padding:4px 0 40px;margin-bottom:36px;border-bottom:1px solid var(--line)}
+.screen:last-of-type{border-bottom:0}
+.screen__title{font-size:24px;letter-spacing:-.01em;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.screen__title .no{background:var(--green);color:#fff;font-size:13px;font-weight:700;border-radius:6px;padding:2px 8px;position:relative;top:-2px}
+.screen__path{color:var(--muted);font-size:13.5px;margin:0 0 14px}
+/* Ảnh chiếm hết bề ngang, ghi chú nằm dưới ảnh */
+.screen__body{display:flex;flex-direction:column;gap:16px}
+.screen__shots{display:flex;flex-direction:column;gap:14px;min-width:0}
+.screen__notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:12px;align-items:start}
+
+.shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.shot figcaption{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 8px 7px 12px;background:var(--panel2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.shot img{display:block;width:100%;cursor:zoom-in}
+.shot__zoom{font-size:12px;padding:3px 9px}
+.tag-demo{display:inline-block;background:var(--goldbg);color:var(--gold);border:1px solid var(--goldline);font-size:11.5px;font-weight:600;border-radius:5px;padding:0 6px}
+
+.note{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:15px 18px}
+.note h3{font-size:15px;margin:0 0 6px}
+.note p,.note ul{font-size:15px;margin:0;color:#2E4A3C;max-width:95ch}
+.note--biz{background:var(--goldbg);border-color:var(--goldline)}
+.note--biz h3{color:var(--gold)}
+
+/* Mockup minh họa (khi chưa có ảnh thật) */
+.demo{padding:14px;font-size:13.5px}
+.demo table{font-size:13px}
+.demo .demo__bar{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.demo input{font:inherit;font-size:13px;padding:5px 9px;border:1px solid var(--line);border-radius:6px;min-width:0;flex:1}
+
+/* Sắp có */
+.soon{border:1.5px dashed var(--line);background:var(--panel);border-radius:var(--r);padding:26px 26px;color:var(--muted);max-width:720px}
+.soon b{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+
+/* Phóng to ảnh */
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(15,30,22,.86);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:6px;background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px}
+
+@media (max-width:820px){
+  .grid2{grid-template-columns:1fr}
+  .arch{grid-template-columns:1fr}
+  .arch .ar{transform:rotate(90deg);justify-self:center}
+  .screen__title{font-size:21px}
+}

@@ -1,0 +1,115 @@
+/* Sơ đồ quy trình kho – chép từ dự án Dorco_WMS (core/css/blocks/process-flow.css).
+   Biến màu dưới đây nối sang màu của trang TSD. */
+.pf-root{
+  --c-card:var(--panel); --c-soft:#EEF3EF; --c-line:var(--line); --c-ink:var(--ink); --c-muted:var(--muted);
+  --c-accent:var(--green); --c-sync:#B4532A;
+  --c-sap:#2B5F8A; --c-wms:#6A4A85; --c-pda:#2F6F6A; --c-manual:#6B7A72;
+  --pf-blue:#2F5D8A; --pf-green:#3B6B45; --pf-orange:#9A531C; --pf-red:#9E3A32; --pf-teal:#2F6A65;
+  --pf-indigo:#474D8A; --pf-purple:#664784; --pf-cyan:#2A667A; --pf-slate:#525963;
+  --fs-sm:13px; --r-card:12px; --r-lane:14px; --r-chip:999px;
+  --shadow:0 0 0 1px var(--line);
+  margin-top:14px
+}
+.pf-root h3,.pf-root h4{margin:0;line-height:1.3}
+.pf-root p{margin:0}
+.app-icon{width:22px;height:22px;flex:none}
+.app-sys{display:inline-block;font-size:11px;font-weight:600;padding:1px 9px;border-radius:999px;background:var(--panel);border:1px solid currentColor;white-space:nowrap}
+.app-sys[data-sys=SAP]{color:var(--c-sap)} .app-sys[data-sys=WMS]{color:var(--c-wms)} .app-sys[data-sys=PDA]{color:var(--c-pda)}
+.app-sys[data-sys=MANUAL],.app-sys:not([data-sys]){color:var(--c-manual)}
+.pf-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:var(--fs-sm);color:var(--c-muted)}
+.pf-scroll{overflow-x:auto;padding-bottom:8px}
+.pf-sheet{min-width:1640px;max-width:1880px}
+.pf-head{margin:0 0 22px}
+.pf-head h2{font-size:28px}
+.pf-head p{color:var(--c-muted);margin-top:4px}
+
+/* quy trình */
+.pf-lane{background:var(--c-card);border-radius:var(--r-lane);box-shadow:var(--shadow);padding:18px 20px 20px;margin-bottom:18px;border-left:6px solid var(--pf-c)}
+.pf-lane-hd{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.pf-lane-num{flex:none;min-width:36px;height:36px;padding:0 8px;border-radius:var(--r-chip);background:var(--pf-c);color:#fff;display:grid;place-items:center;font-weight:600;font-size:16px}
+.pf-lane-hd h3{font-size:21px}
+.pf-lane-hd p{font-size:var(--fs-sm);color:var(--c-muted)}
+.pf-body{display:flex;gap:0;align-items:stretch}
+.pf-body.pf-stack{flex-direction:column;gap:16px}
+.pf-row>.pf-group{flex:var(--pf-w,1) 1 0}
+.pf-group{min-width:0}
+.pf-group.pf-labeled{border:1.6px dashed var(--pf-g);border-radius:var(--r-card);padding:10px 10px 10px;position:relative}
+.pf-group-label span{display:block;font-weight:400;color:var(--c-muted);margin-top:2px}
+.pf-group.pf-aside{display:flex;align-items:stretch;gap:12px}
+.pf-aside>.pf-group-label{flex:0 0 150px;align-self:center;margin:0 0 0 6px;line-height:1.5}
+.pf-aside>.pf-steps{flex:1;min-width:0}
+.pf-group-label{font-size:var(--fs-sm);font-weight:600;color:var(--pf-g);margin:0 0 8px 4px}
+.pf-steps{display:flex;align-items:stretch}
+
+/* bước */
+.pf-step{flex:1 1 0;min-width:0;background:var(--c-soft);border-radius:var(--r-card);padding:12px 12px 14px;display:flex;flex-direction:column}
+.pf-step.pf-wide{flex-grow:1.7}
+.pf-step.pf-optional{background:var(--c-card);border:1.6px dashed var(--pf-g)}
+.pf-step-hd{display:flex;gap:8px;align-items:flex-start;min-height:38px}
+.pf-num{flex:none;width:24px;height:24px;border-radius:50%;background:var(--pf-g,var(--pf-c));color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;margin-top:1px}
+.pf-step h4{font-size:15px;color:var(--c-ink)}
+.pf-meta{display:flex;align-items:center;gap:8px;margin:6px 0 8px;color:var(--pf-g,var(--pf-c))}
+.pf-meta .app-icon{width:28px;height:28px}
+.pf-sys{display:flex;flex-wrap:wrap;gap:4px}
+.pf-step ul{margin:0;padding-left:16px;font-size:13px;line-height:1.5;color:#4f453e}
+.pf-step li{margin:2px 0}
+.pf-step li.pf-sync{list-style:none;margin-left:-16px;color:var(--c-sync);font-weight:600}
+.pf-step li.pf-sync::before{content:"⇄ "}
+.pf-case{margin-top:8px;background:var(--c-card);border-radius:8px;padding:6px 9px;font-size:12.5px;line-height:1.45}
+.pf-case b{display:inline-block;min-width:20px;text-align:center;font-size:11px;color:#fff;background:var(--pf-c);border-radius:4px;padding:0 5px;margin-right:2px}
+.pf-case[data-tag=A] b{background:#9a531c} .pf-case[data-tag=B] b{background:#2f6a65}
+.pf-alert{display:block;color:var(--pf-red);font-weight:600;margin-top:2px}
+
+/* mũi tên */
+.pf-arrow{flex:0 0 26px;align-self:center;height:12px;position:relative;color:var(--pf-a,var(--pf-g,var(--pf-c)))}
+.pf-arrow::before{content:"";position:absolute;left:4px;right:8px;top:5px;border-top:2px solid currentColor}
+.pf-arrow::after{content:"";position:absolute;right:2px;top:1px;border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.pf-arrow-dashed::before{border-top-style:dashed}
+.pf-row>.pf-arrow{flex-basis:34px}
+.pf-row>.pf-group+.pf-group{margin-left:18px}
+.pf-row>.pf-arrow+.pf-group{margin-left:0}
+
+/* layout 'side': nhóm đầu là lưới nhiều hàng, các nhóm sau là cột dọc bên phải */
+.pf-side>.pf-group:first-child{flex:var(--pf-cols) 1 0}
+.pf-side>.pf-group:first-child>.pf-steps{display:grid;grid-template-columns:repeat(calc(var(--pf-cols) - 1),minmax(0,1fr) 26px) minmax(0,1fr)}
+.pf-side>.pf-group:first-child>.pf-steps>.pf-arrow{align-self:center}
+.pf-side>.pf-arrow{flex-basis:34px}
+.pf-side>.pf-group~.pf-group{flex:1.15 1 0;margin-left:0}
+.pf-side>.pf-group~.pf-group>.pf-steps{flex-direction:column}
+.pf-side>.pf-group~.pf-group>.pf-steps>.pf-arrow{flex:0 0 24px;width:12px;height:auto;align-self:center}
+.pf-side>.pf-group~.pf-group>.pf-steps>.pf-arrow::before{left:5px;right:auto;top:3px;bottom:9px;border-top:0;border-left:2px solid currentColor}
+.pf-side>.pf-group~.pf-group>.pf-steps>.pf-arrow::after{right:auto;left:1px;top:auto;bottom:2px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid currentColor;border-bottom:0}
+/* đường nối xuống hàng: từ giữa ô cuối hàng trên, vòng sang trái, xuống ô đầu hàng dưới */
+.pf-wrap{grid-column:1/-1;height:30px;position:relative;color:var(--pf-g,var(--pf-c));--pf-half:calc((100% - (var(--pf-cols) - 1) * 26px) / var(--pf-cols) / 2)}
+.pf-wrap i:first-child{position:absolute;left:var(--pf-half);right:var(--pf-half);top:4px;height:11px;border:2px solid currentColor;border-top:0;border-left:0;border-bottom-right-radius:8px}
+.pf-wrap i:last-child{position:absolute;left:var(--pf-half);top:13px;bottom:4px;width:8px;border-left:2px solid currentColor;border-top:2px solid currentColor;border-top-left-radius:8px}
+.pf-wrap i:last-child::after{content:"";position:absolute;left:-6px;bottom:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid currentColor}
+.pf-note{margin-top:10px;font-size:var(--fs-sm);font-style:italic;color:var(--c-muted)}
+
+/* 3 khung cuối */
+.pf-panels{display:grid;grid-template-columns:1.3fr 1.2fr 1fr;gap:16px;margin-top:6px}
+.pf-panel{background:var(--c-card);border-radius:var(--r-lane);box-shadow:var(--shadow);padding:16px 18px}
+.pf-panel h3{font-size:18px;margin-bottom:12px}
+.pf-sysrow{display:flex;align-items:center;gap:6px}
+.pf-sysbox{flex:1;background:var(--c-soft);border-radius:var(--r-card);padding:10px;text-align:center;font-size:12.5px;line-height:1.4;color:#4f453e}
+.pf-sysbox .app-icon{display:block;margin:0 auto 4px;color:var(--c-accent)}
+.pf-sysbox strong{display:block;font-size:15px;color:var(--c-ink)}
+.pf-link{flex:0 0 108px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:600;color:var(--c-sync);text-align:center;line-height:1.25}
+.pf-link i{display:block;width:100%;border-top:2px dashed var(--c-sync)}
+.pf-notes ul{margin:0;padding-left:18px;font-size:13.5px}
+.pf-notes li{margin:4px 0}
+.pf-lg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:13px}
+.pf-lg li{display:flex;align-items:center;gap:8px}
+.pf-lg-arrow{width:34px;height:10px;position:relative;color:var(--pf-a)}
+.pf-lg-arrow::before{content:"";position:absolute;left:0;right:7px;top:4px;border-top:2px solid currentColor}
+.pf-lg-arrow.is-dashed::before{border-top-style:dashed}
+.pf-lg-arrow::after{content:"";position:absolute;right:0;top:0;border-left:7px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.pf-lg-sw{width:22px;height:14px;border-radius:4px;border-left:5px solid var(--pf-a);background:var(--c-soft)}
+.pf-lg-sync{width:34px;text-align:center;color:var(--c-sync);font-weight:700}
+.pf-lg-sys{margin-top:10px;font-size:13px;display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+@media print{
+  .pf-toolbar{display:none}
+  .pf-scroll{overflow:visible}
+  .pf-sheet{zoom:.9!important;width:1640px;max-width:none}   /* 1640 px × 0,9 ≈ 1476 px < 1512 px khổ A3 ngang */
+  .pf-lane{break-inside:avoid;box-shadow:none;border:1px solid var(--c-line);border-left:6px solid var(--pf-c)}
+}

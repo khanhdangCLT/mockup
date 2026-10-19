@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11. Phát hành tem nhãn – Dorco WMS TSD</title>
+<meta name="description" content="Dorco WMS – To-Be Solution Design: giải pháp quản lý kho cho Dorco Vina và Dorco Living.">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body data-root="../" data-page="11">
+<main class="content">
+
+<div class="page-head">
+  <small>Giải pháp hệ thống</small>
+  <h1>11. Phát hành tem nhãn</h1>
+  <p>In tem QR cho nguyên vật liệu, thành phẩm và vị trí. Tem QR là chìa khóa của toàn bộ thao tác kho: mỗi tem định danh một pallet.</p>
+</div>
+
+<!-- ===== BẮT ĐẦU: 11.1 Phát hành tem QR nguyên vật liệu ===== -->
+<section class="screen" id="t-nvl">
+  <h2 class="screen__title"><span class="no">11.1</span>Phát hành tem QR nguyên vật liệu</h2>
+  <p class="screen__path">Phát hành nhãn</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Minh họa – chưa phải màn hình thật</figcaption>
+        <div class="demo">
+          <div class="demo__bar"><span class="tag-demo">Minh họa</span><input value="PO-4500123 / SO-2610" aria-label="Lệnh nhập" readonly><span class="btn btn--pri">In tem</span></div>
+          <div class="tw"><table><thead><tr><th>Mã hàng</th><th>Tên hàng</th><th>Quy cách</th><th>SL nhập</th><th>Số tem</th></tr></thead><tbody>
+          <tr><td>NVL-0412</td><td>Dải thép lưỡi dao</td><td>500 / pallet</td><td>2.000</td><td>4</td></tr>
+          <tr><td>NVL-0877</td><td>Nhựa PP hạt</td><td>1.000 kg / pallet</td><td>3.000</td><td>3</td></tr>
+          <tr><td>NVL-1203</td><td>Hộp carton 3 lớp</td><td>800 / pallet</td><td>2.400</td><td>3</td></tr>
+          </tbody></table></div>
+        </div></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Phát hành tem QR cho nguyên vật liệu theo lệnh nhập. Hệ thống tính số tem theo quy cách pallet (một pallet chỉ một loại hàng), in tem và cho phép in lại khi hàng nhận khác lệnh. Tem gồm ngày sản xuất, NCC, order, checklist, mã hàng, tên hàng và SO nếu hàng nhập theo SO.</p></div>
+      <div class="note note--biz"><h3>Lưu ý nghiệp vụ</h3><ul><li>HY: NCC dán tem trước khi giao. HN: kho dán tem khi hàng về.</li></ul></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: 11.1 Phát hành tem QR nguyên vật liệu ===== -->
+
+</main>
+
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/layout.js"></script>
+</body>
+</html>

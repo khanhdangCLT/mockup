@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1. Master data – Dorco WMS TSD</title>
+<meta name="description" content="Dorco WMS – To-Be Solution Design: giải pháp quản lý kho cho Dorco Vina và Dorco Living.">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body data-root="../" data-page="01">
+<main class="content">
+
+<div class="page-head">
+  <small>Giải pháp hệ thống</small>
+  <h1>1. Master data</h1>
+  <p>Danh mục nền dùng chung cho mọi quy trình kho.</p>
+</div>
+
+<!-- ===== BẮT ĐẦU: 1.1 Danh mục tổ chức ===== -->
+<section class="screen" id="m-org">
+  <h2 class="screen__title"><span class="no">1.1</span>Danh mục tổ chức</h2>
+  <p class="screen__path">Thiết lập chung › Thiết lập tổ chức › Tổ chức</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Giao diện WMS · Danh mục tổ chức</figcaption>
+        <img src="../images/01-master-data/1.png?v=2026-10-16" alt="Màn hình Danh mục tổ chức: cây tổ chức và chi tiết công ty"></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Danh mục tổ chức dùng thiết lập cơ cấu tổ chức công ty, được đồng bộ từ SAP qua WMS. Không cho phép thêm mới, sửa trên WMS.</p></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: 1.1 Danh mục tổ chức ===== -->
+
+<!-- ===== BẮT ĐẦU: 1.2 Danh mục kho ===== -->
+<section class="screen" id="m-warehouse">
+  <h2 class="screen__title"><span class="no">1.2</span>Danh mục kho</h2>
+  <p class="screen__path">Thiết lập chung › Thiết lập tổ chức › Tổ chức</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Giao diện WMS · Danh mục kho</figcaption>
+        <img src="../images/01-master-data/2.png?v=2026-10-16" alt="Màn hình chi tiết một kho trong cây tổ chức"></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Danh mục kho được đồng bộ từ SAP về WMS. Không cho phép thêm mới, sửa trên WMS.</p></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: 1.2 Danh mục kho ===== -->
+
+<!-- ===== BẮT ĐẦU: 1.3 Danh mục vị trí ===== -->
+<section class="screen" id="m-location">
+  <h2 class="screen__title"><span class="no">1.3</span>Danh mục vị trí</h2>
+  <p class="screen__path">Thiết lập chung › Thiết lập tổ chức › Danh mục vị trí</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Giao diện WMS · Danh sách vị trí</figcaption>
+        <img src="../images/01-master-data/3.png?v=2026-10-15" alt="Màn hình danh sách vị trí"></figure>
+      <figure class="shot"><figcaption>Giao diện WMS · Thêm vị trí</figcaption>
+        <img src="../images/01-master-data/4.png?v=2026-10-15" alt="Màn hình thêm vị trí"></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Danh mục vị trí dùng quản lý các vị trí lưu trữ trong kho (Bin, Shelf, Floor). Người dùng tìm kiếm theo bộ lọc, thêm vị trí mới (chọn kho, nhập tên, loại, giới hạn sức chứa), tạo và gán mã QR, in nhãn vị trí. Mã vị trí do hệ thống tự sinh.</p></div>
+      <div class="note note--biz"><h3>Lưu ý nghiệp vụ</h3><ul><li>Vị trí chỉ quản lý trên WMS, không đồng bộ từ SAP.</li><li>Mỗi vị trí có một mã QR để PDA quét khi nhập, xuất, chuyển vị trí.</li></ul></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: 1.3 Danh mục vị trí ===== -->
+
+<!-- ===== BẮT ĐẦU: 1.4 Đối tác kinh doanh ===== -->
+<section class="screen" id="m-partner">
+  <h2 class="screen__title"><span class="no">1.4</span>Đối tác kinh doanh</h2>
+  <p class="screen__path">Thiết lập chung › Đối tác kinh doanh</p>
+  <div class="screen__body">
+    <div class="screen__shots">
+      <figure class="shot"><figcaption>Giao diện WMS · Đối tác kinh doanh</figcaption>
+        <img src="../images/01-master-data/5.png?v=2026-10-16" alt="Màn hình danh sách đối tác kinh doanh"></figure>
+    </div>
+    <aside class="screen__notes">
+      <div class="note"><h3>Mô tả</h3><p>Danh mục đối tác kinh doanh quản lý khách hàng và nhà cung cấp (một đối tác có thể giữ cả hai vai trò), kèm quốc gia, tiền tệ, điều khoản thanh toán, mã số thuế. Người dùng tìm kiếm theo bộ lọc, xem chi tiết hoặc thêm đối tác mới.</p></div>
+      <div class="note note--biz"><h3>Lưu ý nghiệp vụ</h3><ul><li>Nhà cung cấp dùng cho nhập NVL, trả NCC. Khách hàng dùng cho giao hàng, hàng bán trả lại.</li></ul></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== KẾT THÚC: 1.4 Đối tác kinh doanh ===== -->
+
+</main>
+
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/layout.js"></script>
+</body>
+</html>

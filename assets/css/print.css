@@ -1,0 +1,9 @@
+@media print{
+  .side,.top,.pager,.shot__zoom,.lightbox{display:none!important}
+  .app{display:block}
+  body{background:#fff;font-size:11pt}
+  .content{padding:0;max-width:none}
+  .screen{break-inside:avoid-page}
+  .shot,.note,.box,.tw{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}

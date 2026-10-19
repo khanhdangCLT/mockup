@@ -1,0 +1,26 @@
+/* Biến thiết kế dùng chung. Đổi màu/chữ cho cả trang tại đây. */
+:root{
+  --bg:#F3F6F3;       /* nền trang */
+  --panel:#FFFFFF;    /* thẻ, khung ảnh */
+  --panel2:#E8EEE9;   /* thanh tiêu đề khung ảnh */
+  --side:#E0ECE5;     /* thanh bên */
+  --ink:#172C22;      /* chữ chính */
+  --muted:#4D6658;    /* chữ phụ */
+  --line:#C5D5CB;     /* viền */
+  --green:#167451;    /* màu nhấn */
+  --green-dk:#0F5A3E;
+  --on:#BFD8C9;       /* mục lục đang chọn */
+  --hover:#CCE1D4;
+  --gold:#8C6B12;
+  --goldbg:#FBF3DC;
+  --goldline:#E6D7A6;
+  --hy:#1F5FA8;
+  --hn:#8C3B8C;
+
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --r-sm:8px;
+  --r:12px;
+  --side-w:300px;
+  --notes-w:340px;
+  --top-h:52px;
+}

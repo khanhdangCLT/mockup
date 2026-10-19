@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dorco WMS – To-Be Solution Design</title>
+<meta name="description" content="Dorco WMS – To-Be Solution Design: giải pháp quản lý kho cho Dorco Vina và Dorco Living.">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/process-flow.css">
+<link rel="stylesheet" href="assets/css/print.css">
+</head>
+<body data-root="" data-page="home">
+<main class="content" id="top">
+
+<!-- ===== BẮT ĐẦU: Trang bìa ===== -->
+<header class="cover">
+  <small>To-Be Solution Design (TSD)</small>
+  <h1>Dorco WMS – To-Be Solution Design</h1>
+  <p>Giải pháp quản lý kho cho Dorco Vina và Dorco Living tại Hưng Yên và Hà Nam, kết nối SAP, WMS và máy PDA. Kèm màn hình hệ thống để hai bên thống nhất trước khi triển khai.</p>
+  <div class="meta">
+    <div>Khách hàng<b>Dorco (Vina, Living)</b></div>
+    <div>Đơn vị thực hiện<b>Cyberlogitec Vietnam</b></div>
+    <div>Phiên bản<b>0.1</b></div>
+  </div>
+</header>
+<!-- ===== KẾT THÚC: Trang bìa ===== -->
+
+<!-- ===== BẮT ĐẦU: A. Mục tiêu và phạm vi ===== -->
+<section class="doc" id="scope">
+<h2>A. Mục tiêu và phạm vi</h2>
+<p class="lead">Tài liệu mô tả cách DORCO WMS vận hành sau khi triển khai, dựa trên kết quả khảo sát tại Hưng Yên (02 đến 05/2026) và Hà Nam (10/2026). Sau buổi trình bày, mục đích là chốt giải pháp và các điểm cần xác nhận, được nêu ở cuối từng phần.</p>
+
+<h3>Mục tiêu</h3>
+<ul>
+  <li>Quản lý tồn kho theo từng tem QR: biết mặt hàng, số lượng, ngày nhập và vị trí của từng pallet.</li>
+  <li>Thay phiếu giấy, email và file Excel bằng yêu cầu, phiếu và phê duyệt ngay trên WMS.</li>
+  <li>Kho thao tác bằng PDA, WMS tự sinh phiếu, văn phòng kho chỉ kiểm tra và duyệt, kết quả tự đồng bộ về SAP.</li>
+  <li>Một giải pháp chung cho Hưng Yên và Hà Nam. Chỗ khác nhau giữa hai nhà máy được ghi rõ bằng nhãn <span class="pl hy">HY</span> <span class="pl hn">HN</span>.</li>
+</ul>
+
+<div class="grid2">
+  <div class="box box--in">
+    <h4>Trong phạm vi</h4>
+    <ul>
+      <li>Nhập, xuất, trả nguyên vật liệu và hàng gia công</li>
+      <li>Nhập kho thành phẩm, giao hàng, nhận hàng bán bị trả lại</li>
+      <li>Nhập khác, xuất mẫu, xuất hủy</li>
+      <li>Chuyển kho và chuyển vị trí</li>
+      <li>Kiểm kê hằng tháng, tra cứu tồn, báo cáo tồn kho</li>
+      <li>Tem QR cho nguyên vật liệu và thành phẩm</li>
+      <li>WMS Web, ứng dụng PDA và đồng bộ SAP ⇄ WMS</li>
+    </ul>
+  </div>
+  <div class="box box--out">
+    <h4>Ngoài phạm vi (theo khảo sát)</h4>
+    <ul>
+      <li>Vật tư tiêu hao: nhập về dùng ngay, không theo dõi tồn trên hệ thống</li>
+      <li>Cảnh báo tồn Min/Max: hiện chưa cần</li>
+      <li>Quản lý hạn sử dụng: Dorco chỉ theo dõi ngày nhập</li>
+      <li>Phân hạng hàng A/B/C</li>
+    </ul>
+    <div class="ask"><b>Cần xác nhận:</b> danh sách ngoài phạm vi này được tổng hợp từ khảo sát.</div>
+  </div>
+</div>
+
+<h3>Phạm vi nhà máy và kho</h3>
+<div class="tw"><table class="t">
+<thead><tr><th>Nhà máy</th><th>Pháp nhân</th><th>Kho chính (mã SAP)</th><th>Quản lý vị trí</th></tr></thead>
+<tbody>
+<tr><td><span class="pl hy">HY</span>Hưng Yên</td><td>Dorco Vina (2000)</td><td>1000 NVL/BTP, 5000 thành phẩm, 5900 hàng bán trả lại, 9000 hàng lỗi</td><td>Có</td></tr>
+<tr><td><span class="pl hn">HN</span>Hà Nam A</td><td>Dorco Vina (2000), Dorco Living (2100)</td><td>Vina: 1003, 3013, 3903, 5003, 5900, 9003. Living: 1000, 3000, 5000</td><td>Có</td></tr>
+<tr><td><span class="pl hn">HN</span>Hà Nam B</td><td>Dorco Vina (2000), Dorco Living (2100)</td><td>Vina: 1004, 3004, 5004. Living: 1004, 3004, 5004, 9000</td><td>Chỉ theo kho</td></tr>
+<tr><td><span class="pl hn">HN</span>Kho thuê ngoài</td><td>Dorco Vina</td><td>5010 (bán thành phẩm, thành phẩm)</td><td>Theo kho</td></tr>
+</tbody></table></div>
+
+</section>
+<!-- ===== KẾT THÚC: A. Mục tiêu và phạm vi ===== -->
+
+<!-- ===== BẮT ĐẦU: B. Quy trình nghiệp vụ kho (sơ đồ vẽ từ assets/data/processes.js) ===== -->
+<section class="doc" id="quy-trinh">
+<h2>B. Quy trình nghiệp vụ kho</h2>
+<p class="lead">8 nhóm quy trình kho (nguyên vật liệu, gia công, thành phẩm, bán hàng, chuyển kho, kiểm kê…) và điểm tích hợp SAP – WMS – PDA, tổng hợp từ khảo sát.</p>
+<div data-process-flow="processes"></div>
+<noscript><p class="sub">Cần bật JavaScript để xem sơ đồ quy trình.</p></noscript>
+</section>
+<!-- ===== KẾT THÚC: B. Quy trình nghiệp vụ kho ===== -->
+
+<!-- ===== BẮT ĐẦU: Giải pháp hệ thống (thẻ tự tạo từ assets/js/menu.js) ===== -->
+<section class="doc" id="solution">
+<h2>Giải pháp hệ thống</h2>
+<p class="lead">Giải pháp chi tiết cho từng nhóm nghiệp vụ, kèm màn hình WMS. Chọn một mục để xem.</p>
+<div class="cards" data-menu-cards="Giải pháp hệ thống"></div>
+<noscript><p><a href="pages/01-master-data.html">1. Master data</a></p></noscript>
+</section>
+<!-- ===== KẾT THÚC: Giải pháp hệ thống ===== -->
+
+</main>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/process-flow.js"></script>
+<script src="assets/data/processes.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>
